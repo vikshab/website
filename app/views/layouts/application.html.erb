@@ -5,10 +5,42 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <script type="text/javascript" src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <!-- <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
 </head>
 <body>
 
+  <div id="site-banner-left">
+
+  </div>
 <%= yield %>
 
+  <nav class="navbar">
+    <% if !current_page?('/') %>
+      <%= link_to "HOME", root_path %>
+    <% end %>
+
+    <% if !current_page?('/about') %>
+      <%= link_to "ABOUT", about_path %>
+    <% end %>
+
+    <% if !current_page?('/blog') %>
+      <%= link_to "BLOG", blog_path %>
+    <% end %>
+
+    <% if !current_page?('/portfolio') %>
+      <%= link_to "PORTFOLIO", portfolio_path %>
+    <% end %>
+
+    <% if !current_page?('/contact') %>
+      <%= link_to "CONTACT", contact_path %>
+    <% end %>
+
+    <% if current_page?('/portfolio') %>
+      <a href="#" onclick="return false;" onmousedown="resetScroller('top');">Go back to top</a>
+    <% end %>
+  </nav>
 </body>
 </html>
