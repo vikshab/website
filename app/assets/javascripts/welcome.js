@@ -306,6 +306,9 @@ function randomTileNumber() {
 function endGame() {
   var takenSpace = locateTiles();
   if(takenSpace.length === 16){
+    // var message =  $("<div class='endGame'></div>")
+    // message.text("GAME OVER");
+    // message.appendTo($("#top").css("position", "relative"));
     alert("Game Over");
     console.log("Game over")
   }
