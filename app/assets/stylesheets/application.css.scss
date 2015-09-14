@@ -17,123 +17,17 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+body {
+  text-align: center;
+  background-color: #708090;
+}
+
 header {
   height: 100px;
   background: #708090;
   width: 100%;
   z-index: 10;
   position: fixed;
-}
-
-#banner {
-  width: 100%;
-  height: 800px;
-  position: fixed;
-  top: 100px;
-  background-image: url('banner.jpg');
-  background-repeat: no-repeat;
-}
-
-#content {
-  width: 100%;
-  position: relative;
-  top: 400px;
-  background: #ebebeb;
-  opacity: 0.8;
-  height: 1500px;
-}
-
-#photos {
-  width: 100%;
-  height: 500px;
-  position: relative;
-  top: 400px;
-  background-color: #708090;
-  background-repeat: no-repeat;
-}
-
-.container-fluid {
-  padding-top: 20px;
-  text-align: justify;
-}
-
-#photos .row {
-  padding-top: 30px;
-}
-
-#blog {
-	font-family: 'Nothing You Could Do';
-	font-size: 24px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 500;
-	line-height: 26.4px;
-}
-
-#welcome_banner {
-  width: 100%;
-  height: 800px;
-  position: fixed;
-  top: 100px;
-  background-image: url('welcome.jpg');
-  background-repeat: no-repeat;
-  background: cover;
-}
-
-#welcome_content {
-  width: 100%;
-  position: relative;
-  top: 400px;
-  background: #ebebeb;
-  opacity: 0.8;
-  height: 500px;
-}
-
-#profile {
-  padding-top: 100px;
-}
-
-#portfolio_banner {
-  width: 100%;
-  height: 800px;
-  position: fixed;
-  top: 100px;
-  background-image: url('portfolio.jpg');
-  background-repeat: no-repeat;
-  background: cover;
-}
-
-// #portfolio_content {
-//   width: 100%;
-//   position: relative;
-//   top: 400px;
-//   // background: #ebebeb;
-//   background: #708090;
-//   // opacity: 0.8;
-//   height: 500px;
-// }
-
-.main {
-  padding-top: 200px;
-}
-
-.profile_photo {
-  width:330px;
-  margin: 10px;
-  border:10px solid white;
-  border-radius: 500px;
-  -webkit-border-radius: 500px;
-  -moz-border-radius: 500px;
-}
-
-h1 {
-	font-family: Optima, Segoe, 'Segoe UI', Candara, Calibri, Arial, sans-serif;
-	font-size: 30px;
-	font-style: normal;
-	font-variant: normal;
-	font-weight: 800;
-	line-height: 26.4px;
-  color: white;
 }
 
 h2 {
@@ -151,18 +45,40 @@ h3 {
   color: white;
 }
 
-body {
-  text-align: center;
-  background-color: #708090;
-  // background-image: url("background.jpg");
-  // background-image: url("greybackground.jpg");
-  // background-image: url("grey.jpg");
-  // background-color: #696969;
-  // background-size: cover;
+.banner {
+  width: 100%;
+  height: 800px;
+  position: fixed;
+  top: 100px;
+  background-repeat: no-repeat;
+  background: cover;
 }
 
+.content {
+  width: 100%;
+  position: relative;
+  top: 400px;
+  background: #ebebeb;
+  opacity: 0.8;
+}
+
+.title {
+	font-family: 'Nothing You Could Do';
+	font-size: 24px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 500;
+	line-height: 26.4px;
+  color: white;
+}
+
+.container-fluid {
+  padding-top: 20px;
+  text-align: justify;
+}
+
+// BUTTONS STYLING--------------------------------------------------------------
 $orange: #FF7F50;
- // $orange: #E1332D;
 $white: #fff;
 
 .buttons {
@@ -203,7 +119,6 @@ $white: #fff;
   max-width: 80px;
   position: relative;
   text-decoration: none;
-  // text-transform: uppercase;
   vertical-align: middle;
   width: 100%;
 
@@ -252,11 +167,10 @@ $white: #fff;
    color: white;
    padding-left: 10px;
  }
+//------------------------------------------------------------------------------
 
 .navbar {
   background-color:#FF7F50;
-  // background-color: #fa6900;
-  // background-color:#262626;
   width:100%;
   height:50px;
   box-shadow: 0px 1px 50px #5E5E5E;
@@ -273,29 +187,90 @@ $white: #fff;
   color: #708090;
 }
 
-.contact {
-  margin: 20px;
+// WELCOME PAGE -----------------------------------------------------------------
+#profile_photo {
+  padding-top: 100px;
 }
 
-.project1 {
+.photo_frame {
+  width:330px;
+  margin: 10px;
+  border:10px solid white;
+  border-radius: 500px;
+  -webkit-border-radius: 500px;
+  -moz-border-radius: 500px;
+}
+
+.banner#welcome {
+  background-image: url('welcome.jpg');
+}
+
+.content#welcome {
+  height: 500px;
+}
+
+// BLOG-------------------------------------------------------------------------
+.banner#blog {
+  background-image: url('blog.jpg');
+}
+
+.content#blog {
+  height: 1500px;
+}
+
+.list-unstyled a {
+  text-decoration: none;
+  color: black;
+}
+
+// ABOUT -----------------------------------------------------------------------
+.banner#about {
+  // background-color: #708090;
+  background-image: url("about.jpg")
+}
+
+.content#about {
   height: 1200px;
-  margin: 20px;
-  font-size: 30px;
+  width: 100%;
+  top: 100px;
+  background-color:white;
+  opacity: 1.0;
 }
 
-.project2 {
+#about_me {
+  font-family: 'Nothing You Could Do';
+  font-size: 20px;
+  margin: 40px;
+  background-color: #ffffff;
+  padding-top: 100px;
+  padding-left: 100px;
+  padding-right: 100px;
+  opacity: 0.8;
   height: 1200px;
-  margin: 20px;
-  font-size: 30px;
+  width: 1000px;
+  position: relative;
 }
 
-.project3 {
-  height: 1200px;
-  margin: 20px;
-  font-size: 30px;
+#about_me p {
+  padding: 50px;
+  text-align: justify;
 }
 
-.project4 {
+// CONTACT ----------------------------------------------------------------------
+  #contact {
+    padding-top: 290px;
+  }
+
+// PORTFOLIO -------------------------------------------------------------------
+.content#portfolio {
+  height: 1500px;
+}
+
+.banner#portfolio {
+  background-image: url('portfolio.jpg');
+}
+
+.project {
   height: 1200px;
   margin: 20px;
   font-size: 30px;
@@ -303,13 +278,12 @@ $white: #fff;
 
 div.transbox {
   margin: 40px;
-  height: 750px;
+  height: 850px;
   width: 300px;
   background-color: #ffffff;
   opacity:0.4;
   filter:alpha(opacity=60); /* For IE8 and earlier */
   float: left;
-  padding-bottom: 10px;
 }
 
 div.transbox p {
@@ -318,7 +292,8 @@ div.transbox p {
 }
 
 .project_name {
-  padding-top: 50px;
+  padding-top: 100px;
+  color: black;
   text-align: center;
 }
 
@@ -339,34 +314,35 @@ div.transbox p {
   top:0px;
 }
 
+// GAME 2048 STYLING -----------------------------------------------------------
 .game {
   float: both;
   padding-top: 20px;
 }
 
-#scoreBoard {
-  padding-left: 300px;
-}
-
 #scoreboard {
   position: relative;
   background: #bbada0;
+  background-color: $orange;
   font-size: 25px;
   height: 80px;
   font-weight: bold;
   border-radius: 3px;
   width: 80px;
+  top: 100px;
   float: right;
+  border-radius: 1.5rem;
+  border-radius: 1.5rem;
+  float: left;
 }
 
 #score {
   width: 100%;
   text-transform: uppercase;
-  font-size: 15px;
+  font-size: 10px;
   text-align: center;
-  color: #eee4da;
-  // margin-bottom: 7px;
-  /*padding-top: 2px;*/
+  color: white;
+  padding-top: 3px;
 }
 
 #score_number {
@@ -376,6 +352,7 @@ div.transbox p {
   text-align: center;
   color: white;
   margin: 0 auto;
+  padding-bottom: 3px;
 }
 
 #gameboard {
@@ -435,14 +412,3 @@ div.transbox p {
 .tile[data-val="512"]  { background: #edc850; }
 .tile[data-val="1024"] { background: #edc53f; }
 .tile[data-val="2048"] { background: #edc22e; }
-
-// .endGame {
-//   position: "absolute";
-//   width: "100%";
-//   height: "100%";
-//   left: 0;
-//   top: 0;
-//   zIndex: 1000000; // to be on the safe side
-//   background-color: #ffffff;
-//   opacity: 0.4;
-// }
