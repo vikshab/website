@@ -37,9 +37,9 @@ function resetScroller(div){
   }
 }
 
+// GAME 2048--------------------------------------------------------------------
 $(document).ready(function() {
   console.log('ready!');
-  // initializeGame();
   play();
 
   $('body').keydown(function(event){
@@ -54,6 +54,7 @@ $(document).ready(function() {
   })
 })
 
+// still doesn't work, need to be fixed
 function play() {
   $(".container").click(function() {
     location.reload();
